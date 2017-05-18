@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    tools:context="com.example.skyma.testrecognition.MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:text="Perform OCR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coordinates are displayed here"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <TextView
+                android:text="Left Eye"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/left_cylinder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Left Cylinder"/>
+
+            <EditText
+                android:id="@+id/left_sphere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Left Sphere"/>
+
+            <EditText
+                android:id="@+id/left_axis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Left Axis"/>
+
+            <EditText
+                android:id="@+id/left_bcva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Left BCVA"/>
+
+            <EditText
+                android:id="@+id/left_ucva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Left UCVA"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:text="Right Eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <EditText
+                android:id="@+id/right_cylinder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Right Cylinder" />
+
+            <EditText
+                android:id="@+id/right_sphere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Right Sphere"/>
+
+            <EditText
+                android:id="@+id/right_axis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Right Axis"/>
+
+            <EditText
+                android:id="@+id/right_bcva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Right BCVA"/>
+
+            <EditText
+                android:id="@+id/right_ucva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Right UCVA"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/textimage"/>
+
+</LinearLayout>
